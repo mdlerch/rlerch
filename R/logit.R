@@ -1,7 +1,8 @@
-#' Calculate the log odds from a proportion
+#'
+#' \code{logit} Calculate the log odds from a proportion
 #'
 #' @description
-#' Calculate the log odds from a proportion
+#' Calculate the log-odds from a proportion
 #'
 #' @details
 #' log(p/(1-p))
