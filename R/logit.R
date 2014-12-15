@@ -1,25 +1,26 @@
 #' Calculate the log odds from a proportion
 #'
 #' @description
-#' This should be the details.  It might be longer than the description
-#' Or, at least that is what I am planning
+#' Calculate the log odds from a proportion
 #'
 #' @details
-#' Actually the above was description, this should be details
+#' log(p/(1-p))
 #'
-#' What if this is multiple lines
+#' @param p Proportion.  Between 0 and 1.
 #'
-#' @param x Proportion.  Between 0 and 1.
-#'
-#' @return the log of the odds associated with x
+#' @return the log of the odds associated with p
 #' @export
 #'
 #' @examples
 #' logit(.5)
-#'
 
 
-logit <- function(x)
+logit <- function(p)
 {
-	log( x / (1 - x) )
+    if (p < 0 | p > 1)
+    {
+        stop("proportion must be between 0 and 1")
+    }
+
+	log( p / (1 - p) )
 }
